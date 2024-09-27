@@ -1,0 +1,51 @@
+@use './colors' as *;
+
+@mixin nav-items-styles {
+  &__items {
+    display: flex;
+    list-style: none;
+    font-size: 2rem;
+  }
+
+  &__item {
+    height: 5em;
+    width: 6em;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+
+      color: black;
+    }
+
+    &--active {
+      background-color: black;
+
+      a {
+        color: white;
+        transition: color 0.3s;
+      }
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    &:first-child:hover a {
+      color: black;
+    }
+  }
+}
+
+@mixin contactForm {
+  margin-bottom: 2em;
+  padding: 0.6em 1.2em;
+  border: none;
+  background-color: $form-color;
+  border-radius: 3px;
+  font-size: 1.6rem;
+}

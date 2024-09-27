@@ -1,0 +1,33 @@
+@use '../abstracts/_abstracts-dir' as *;
+
+body{
+    font-size: 1rem;
+    font-family: 'Montserrat' sans-serif;
+    background-color: $background-main-color;
+}
+
+.fixed-position{
+    position: fixed;
+}
+
+.wrapper{
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+
+.section-title{
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1.5em 0;
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+h2.section-title{
+    scroll-margin-top: $nav-height;
+}
+
+section{
+    overflow: hidden;
+}

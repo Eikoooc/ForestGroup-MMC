@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt Forest</title>
+    <link rel="icon" type="image/svg" href="./dist/img/icons/tree-svgrepo-com.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+<script src="https://kit.fontawesome.com/6330ee0da9.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="./dist/css/style.min.css">
+</head>
+
+<body>
+    <nav class="nav-mobile">
+    <div class="nav-mobile__items">
+        <a href="index.html" class="nav-mobile__items-item">Home</a>
+        <a href="#about-us" class="nav-mobile__items-item">O nas</a>
+        <a href="#offers" class="nav-mobile__items-item">Oferta</a>
+        <a href="kontakt.html" class="nav-mobile__items-item">Kontakt</a>
+    </div>
+</nav>
+
+<nav class="nav">
+    <div class="nav__container">
+        <div class="nav__logo">
+            <a href="index.html">
+                <img class="nav__logo-icon" src="./dist/img/icons/tree-svgrepo-com.svg" alt="Logo w kształcie choinki" >
+                <span class="nav__logo-name">Forest</span>
+            </a>
+        </div>
+        <div class="nav__items">
+            <a href="index.html" class="nav__items-item nav__items-item--active">Home</a>
+            <a href="#about-us" class="nav__items-item">O nas</a>
+            <a href="#offers" class="nav__items-item">Oferta</a>
+            <a href="kontakt.html" class="nav__items-item">Kontakt</a>
+        </div>
+        <button class="nav__burger-btn">
+            <div class="nav__burger-btn-box">
+                <div class="nav__burger-btn-bars"></div>
+            </div>
+        </button>
+    </div>
+</nav>
+
+
+    <main>
+    <section class="contact">
+    <h2 class="section-title">Kontakt</h2>
+    <div class="wrapper">
+        <div class="contact__box">
+            <div class="contact__info">
+                <p class="contact__info-text"><img src="./dist/img/icons/phone.svg" alt="telefon">+48 123 456 789</p>
+                <p class="contact__info-text"><img src="./dist/img/icons/map-pin.svg" alt="siedziba">ul. Jasnogórskiej 2
+                    Kraków</p>
+                <p class="contact__info-text"><img src="./dist/img/icons/mail.svg" alt="email">kontakt@forest.com</p>
+            </div>
+
+
+            <div class="contact__map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d226.26538283453388!2d19.89270948729614!3d50.08814815812987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165a2d7f0d587f%3A0x15f4e7c36adff6d2!2sJasnog%C3%B3rska%202%2C%2031-358%20Krak%C3%B3w!5e0!3m2!1spl!2spl!4v1727206664838!5m2!1spl!2spl"
+                    width="400" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+        <form class="contact__form">
+
+            <div class="contact__form-top">
+                <label for="name" class="contact__form-label">Imię i naziwsko:</label>
+                <input type="text" class="contact__form-input" id="name">
+                <label for="email" class="contact__form-label">Adres e-mail:</label>
+                <input type="text" class="contact__form-input" id="email">
+            </div>
+            <label for="msg" class="contact__form-label ">Wiadomość:</label>
+            <textarea id="msg" class="contact__form-textarea"></textarea>
+
+
+            <p class="contact__form-checkbox"><input type="checkbox">Wyrażam zgodę na
+                przetwarzanie moich danych.
+
+                <span class="contact__form-checkbox-require">* Pole musi być zaznaczone</span>
+            </p>
+            <button type="submit" class="contact__form-btn">Wyślij</button>
+        </form>
+
+    </div>
+</section>
+    </main>
+    <footer class="footer">
+    <div class="footer__content">
+        <div class="footer__content-logo">
+            <a href="#">
+                <img class="footer__content-logo-icon" src="./dist/img/icons/tree-svgrepo-com.svg" alt="Logo w kształcie choinki" >
+                <span class="footer__content-logo-name">Forest</span>
+            </a>
+        </div>
+        <div class="footer__content-main">
+            <table>
+                <tr>
+                    <th>O nas</th>
+                    <th>Nasza firma</th>
+                    <th>Dokumenty</th>
+                </tr>
+                <tr>
+                    <td><a href="#">historia</a></td>
+                    <td><a href="#">Praca</a></td>
+                    <td><a href="#">Wnioski</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Parki</a></td>
+                    <td><a href="#">Kadry</a></td>
+                    <td><a href="#">Rezerwacje</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Opinie</a></td>
+                    <td><a href="#">Zarząd</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="footer__copyright">
+        <p>&copy;<span class="footer__copyright-year"></span> Forest Group Company Ltd.</p>
+    </div>
+</footer>
+    <script src="./dist/js/main.min.js"></script>
+</body>
+
+</html>

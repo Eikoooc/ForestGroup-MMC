@@ -1,0 +1,90 @@
+
+
+.header{
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 40vh;
+    background-image: url('../img/jungle-small.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    z-index: 0;
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.75);
+        z-index: 1;
+    }
+
+    &__text{
+        position: relative;
+        color: white;
+        z-index: 20;
+        width: 100%;
+
+        &-subtitle{
+            font-size: 2rem;
+            margin-bottom: 0.3em;
+            letter-spacing: 3px;
+        }
+
+        &-title{
+            font-size: 2.5rem;
+        }
+    }
+
+    &--offers{
+        background-image: url('../img/trees-small.jpg');
+        background-position: bottom;
+
+        &::before{
+            background-color: rgba(7, 27, 7, 0.425);
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .header{
+        background-image: url('../img/jungle.jpg');
+        &__text{
+            left: 5%;
+            text-align: left;
+
+            &-subtitle{
+                font-size: 2.5rem;
+            }
+
+            &-title{
+                font-size: 3rem;
+            }
+        }
+
+        &--offers{
+            background-image: url('../img/trees.jpg');
+
+            .header__text{
+                left: 0;
+                text-align: center;
+
+                &-title{
+                    font-size: 4rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 786px) {
+    .header{
+        &__text{
+            padding: 0 0.5em;
+        }
+    }
+}
