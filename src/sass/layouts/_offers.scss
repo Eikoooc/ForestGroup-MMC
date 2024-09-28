@@ -214,6 +214,7 @@
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 1fr;
 
+
       &-card {
         width: 80%;
         &-first {
@@ -241,6 +242,7 @@
       .offers {
         &__content-box{
           width: 100%;
+          margin-right: 5em;
         }
 
         &__img img {
@@ -254,7 +256,12 @@
           align-items: center;
 
           &--reverse{
-            flex-direction: row-reverse;
+            flex-direction: row-reverse; 
+
+            .offers__content-box{
+              margin-right: 0;
+              margin-left: 5em;
+            }
           }
         }
       }
