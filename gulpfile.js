@@ -20,6 +20,8 @@ const paths = {
   jsDest: "./dist/js",
   img: "./src/img/*",
   imgDest: "./dist/img",
+  icons: "./src/img/icons/*",
+  iconsDest: "./dist/img/icons",
   dist: "./dist",
 };
 
@@ -73,6 +75,11 @@ function cleanStuff(done) {
   done();
 }
 
+function copyIcons(done) {
+  src(paths.icons).pipe(dest(paths.iconsDest));
+  done();
+}
+
 function startBrowserSync(done) {
   browserSync.init({
     server: {
@@ -89,6 +96,7 @@ function watchForChanges(done) {
     parallel(handleKits, sassCompiler, javaScript)
   ).on("change", reload);
   watch(paths.img, converImages).on("change", reload);
+  watch(paths.icons, copyIcons).on("change", reload);
   done();
 }
 
@@ -97,6 +105,7 @@ const mainFunctions = parallel(
   handleKits,
   sassCompiler,
   javaScript,
-  converImages
+  converImages,
+  copyIcons
 );
 exports.default = series(mainFunctions, startBrowserSync, watchForChanges);
